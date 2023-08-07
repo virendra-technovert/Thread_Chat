@@ -1,0 +1,44 @@
+@import '../../../styles/_colors';
+
+.conversation {
+    display: block;
+    color: $contrasted-primary-text; // $contrasting-primary-text-color;
+    font-size: 1.3rem;
+    border-bottom: 1px solid $primary-dark;
+    padding: 20px 20px 20px 15px;
+
+  &.active,
+  &:hover {
+    background: $primary-dark;
+  }
+  
+  &:hover {
+    cursor: pointer;
+  }
+  
+
+
+  .title-text {
+    font-weight: bold;
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .created-date {
+    color: $light-grey-border;
+    white-space: nowrap;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    
+  }
+
+  .conversation-message {
+   display: flex;
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+}

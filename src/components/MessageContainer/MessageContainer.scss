@@ -1,0 +1,19 @@
+.message-container {
+    display:flex;
+   // background-color: rgb(163, 157, 157);
+    min-height: 50vh;
+  
+        grid-area: chat-message-list;
+        
+        flex-direction: column;
+        //padding: 0 20px;
+        overflow-y: scroll;
+
+}
+.chat-message {
+    grid-area: chat-message-list;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    overflow-y: scroll;
+  }

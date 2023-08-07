@@ -1,0 +1,101 @@
+@import '../../styles/_colors';
+
+$message-time-color: darken($accent-color, 46.5%);
+$speech-bubble-border-color: darken($accent-color, 13.18);
+
+.message-row {
+    display: grid;
+    grid-template-columns: 70%;
+    margin-bottom: 20px;
+ 
+    > .message-content {
+        display: grid;
+        cursor: pointer;
+     
+    flex-direction: column;
+        position: relative;
+
+        > img {
+            border-radius: 100%;
+            grid-row: span 2;
+            width: 48px;
+            height: 48px;
+        }
+        
+        > .message-time {
+            font-size: 0.6rem;
+            color: $message-time-color;
+        }
+        
+        > .message-text {
+            padding: 4px 13px;
+            font-size: 1.1rem;
+            margin-top:10px;
+         
+        }
+    }
+
+    &.you-message {
+        justify-content: end;
+
+        > .message-content {
+            justify-items: end;
+
+            > .message-text {
+                background: $primary-color;
+                color: $contrasted-primary-text;
+                border: 1px solid $primary-color;
+                border-radius: 14px 14px 0 14px;
+            }
+        }
+    }
+
+    &.other-message {
+        justify-items: start;
+
+        > .message-content {
+            grid-template-columns: 48px 1fr;
+            grid-column-gap: 15px;
+            
+
+            > .message-text {
+                background: $accent-color;
+                color: $contrasted-accent-text;
+                border: 1px solid $speech-bubble-border-color;
+                border-radius: 14px 14px 14px 0;
+                margin-top:10px;
+            }
+        }
+    }
+   
+      &.message-row:hover .menu {
+        display: block;
+      }
+}
+.message {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+
+  
+  .reply-to-thread-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #553b3b;
+    padding: 2px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .message-text:hover .reply-to-thread-button {
+    opacity: 1;
+  }
+  

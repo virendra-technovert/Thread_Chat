@@ -1,0 +1,9 @@
+1.Verify if no message is being enter so send button should be deactivate.
+2. Verify if same message is being displayed after pressing send button that user typed on text field.
+3. Verify if user is able to send messages multiple times, and all should be displayed below to each other
+4. Verify if user profile,I'd,timestamp etc, Metadata is being displayed with messages.
+5. For a thread page, user should be able to see a reply option for particular message.
+6. Verify that thread functionality support for 1/2 level.
+7. Verify if user can reply to particular thread.
+8. Verify how much thread count can be exist for a message.
+9.If thread message added to a reply check in ui it is potrayed
